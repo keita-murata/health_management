@@ -1,0 +1,20 @@
+@import "~bootstrap/scss/bootstrap";
+
+#logo {
+    font-size: 1.7em;
+    color: black;
+    letter-spacing: -1px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  #logo:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .header-item {
+    color: #0f0f0f;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
