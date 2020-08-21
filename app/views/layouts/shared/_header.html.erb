@@ -7,23 +7,29 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#"><%= link_to "トップ", root_path, class: "header-item" %><span class="sr-only">(current)</span></a>
+          <%= link_to "トップ", root_path, class: "header-item" %><span class="sr-only">(current)</span></a>
         </li>
     　</ul>
-      <ul class="navbar-nav">
+      <ul class="navbar-nav list-unstyled">
+        <% if user_signed_in? %>
         <li class="nav-item">
-          <a class="nav-link" href="#"><%= link_to "ログイン", "#", class: "header-item" %></a>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-item" %></a>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "ログイン", new_user_session_path, class: "header-item" %></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><%= link_to "新規登録", "#", class: "header-item" %></a>
+          <%= link_to "新規登録", new_user_registration_path, class: "header-item" %></a>
         </li>
+      <% end %>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">その他</a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#"><%= link_to "設定", "#", class: "header-item" %></a>
-          <a class="dropdown-item" href="#"><%= link_to "ヘルプ", top_pages_help_path, class: "header-item" %></a>
-          <a class="dropdown-item" href="#"><%= link_to "お問い合わせ", top_pages_message_path, class: "header-item" %></a>
-        </div>
+          <a class="dropdown-toggle nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">その他</a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#"><%= link_to "設定", "#", class: "header-item" %></a>
+            <a class="dropdown-item" href="#"><%= link_to "ヘルプ", top_pages_help_path, class: "header-item" %></a>
+            <a class="dropdown-item" href="#"><%= link_to "お問い合わせ", top_pages_message_path, class: "header-item" %></a>
+          </div>
         </li>
       </ul>
     </div>
