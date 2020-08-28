@@ -1,7 +1,8 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%= @user.username %>のマイページ</h1>
+<p>体温</p>
+<p>運動メニュー</p>
 
-<%= @user.username %>
+
 <% if @user.id == current_user.id %>
 <%= @user.email %>
 <%= link_to "編集", edit_user_path(@user) %>
