@@ -1,0 +1,8 @@
+<h1>トレーニングメニューの追加</h1>
+<%= form_with(model: @training, local: true) do |f| %>
+    <%= f.label :title, "メニューのタイトル" %>
+    <%= f.text_field :title, class: 'form-control' %>
+    <%= f.label :content, "メニューの内容" %>
+    <%= f.text_field :content, class: 'form-control' %>
+    <%= f.submit "作成"%>
+<% end %>

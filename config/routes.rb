@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get  "top_pages/message"
 
   resources :users
+  resources :trainings
 end
