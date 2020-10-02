@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :trainings, dependent: :destroy
+  has_many :events, dependent: :destroy
   validates :username, presence: true
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

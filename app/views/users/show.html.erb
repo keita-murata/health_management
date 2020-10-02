@@ -1,11 +1,22 @@
-<h1><%= @user.username %>のマイページ</h1>
-<p>体温</p>
-<p>運動メニュー</p>
-
-
 <% if @user.id == current_user.id %>
+  <h1><%= @user.username %>のマイページ</h1>
   <%= @user.email %>
   <%= link_to "編集", edit_user_path(@user) %>
+  <p>体温</p>
+  <%= link_to "体温　予定の記入", new_event_path %>
+  <%= month_calendar events: @event do |date, event| %>
+    <%= date %>
+
+    <% event.each do |event| %>
+      <div>
+        <%= event.name %>
+      </div>
+    <% end %>
+  <% end %>
+  <p>運動メニュー</p>
+  <h1>持っているイベントの数</h1>
+  <%= @user.events.count %><br>
+  <h3>メニューの<%= link_to "作成", new_training_path %></h3>
   <h3><%= @user.username %>さんが考案したトレーニングメニューリスト</h3>
   <% @user.trainings.each do |n| %>
       <%= n.title %>

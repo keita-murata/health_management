@@ -2,14 +2,14 @@
 <html>
   <head>
   <title><%= full_title(yield(:title)) %></title>
-    <%= render "layouts/shared/shims" %>
+    <%= render "shared/shims" %>
   </head>
 
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render "layouts/shared/header" %>
+    <%= render "shared/header" %>
     <%= yield %>
-    <%= render "layouts/shared/footer" %>
+    <%= render "shared/footer" %>
   </body>
 </html>
