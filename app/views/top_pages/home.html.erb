@@ -3,4 +3,8 @@
     <h1>ようこそ<br>Health Managementへ</h1>
     <p>ここで日々の体調を計測したり、運動メニューを作成して体調管理を行おう！</p>
   </div>
+  <div class="top-page-button">
+    <%= link_to "ログイン", new_user_session_path, class: "btn btn-primary" %>
+    <%= link_to "新規登録", new_user_registration_path, class: 'btn btn-primary' %>
+  </div>
 </div>

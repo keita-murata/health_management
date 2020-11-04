@@ -1,3 +1,25 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+ul {
+    list-style: none;
+}
+
+.form {
+    text-align: center;
+}
+
+.container {
+    background-color: lightgray;
+    text-align: center;
+}
+
+.col-md-4 {
+    background-color: burlywood;
+}
+
+table {
+    background-color: white;
+}
+
+.label {
+    text-align: center;
+}
+

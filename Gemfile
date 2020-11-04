@@ -5,6 +5,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 gem 'devise'
+gem 'rails-i18n', '~> 6.0'
+gem 'devise-i18n'
+gem 'kaminari'
+gem 'will_paginate',           '3.1.7'
+gem 'bootstrap-will_paginate', '1.0.0'
+gem 'faker',          '1.7.3'
+
 
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'

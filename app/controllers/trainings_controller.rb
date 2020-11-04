@@ -1,6 +1,6 @@
 class TrainingsController < ApplicationController
     def index
-      @training = Training.all
+    
     end
 
     def show
@@ -15,7 +15,7 @@ class TrainingsController < ApplicationController
       @training = Training.new(training_params)
       if @training.save!
         flash[:success] = "メニューを追加しました"
-        redirect_to @training
+        redirect_to user_path(id: current_user)
       else
         flash.notice = "メニューの作成に失敗しました"
         render "new"

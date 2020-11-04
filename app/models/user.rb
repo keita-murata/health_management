@@ -4,7 +4,7 @@ class User < ApplicationRecord
   validates :username, presence: true
   validates :username, uniqueness: true
   validates :email, presence: true
-  validates :email, unipueness: true
+  validates :email, uniqueness: true
   validates :email, length: { maximum: 50 }
   validates :email, length: { minimum: 8 }
   # Include default devise modules. Others available are:
